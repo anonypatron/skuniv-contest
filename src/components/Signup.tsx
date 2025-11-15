@@ -152,6 +152,7 @@ export default function Signup() {
                                 <input 
                                     type="text" 
                                     id="verificationCode"
+                                    name="code"
                                     onChange={handleFormChange}
                                     value={signupForm.code}
                                     required
