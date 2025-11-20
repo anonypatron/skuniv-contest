@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { useSignup } from '../hooks/auth/useSignup';
 import { requestVerificationCode } from '../api/authApi';
+import { notify } from '../components/notifications/NotificationProvider';
 
 import type { SignupForm } from '../types/signup';
 
@@ -38,6 +39,11 @@ export default function Signup() {
 
     const handleSignup = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+
+        if (signupForm.password.length < 8) {
+            return notify.info('비밀번호는 8자리 이상이여야 합니다.');
+        }
+        
         signup(signupForm);
     };
 
