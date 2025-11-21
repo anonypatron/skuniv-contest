@@ -30,8 +30,10 @@ export const addCustomLecture = async (year: number, semester: number, form: Man
 };
 
 export const autoGenerate = async (options: AutoOptions): Promise<TimeTableDto> => {
+    console.log(options);
     try {
         const res = await api.post('/api/timetables/auto-generate', options);
+        console.log(res.data);
         return res.data;
     } catch (err: any) {
         console.error(err);
