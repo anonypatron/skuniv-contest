@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const GE_CATEGORIES = ["인문과예술", "과학과기술", "사회와평화", "문화와역사", "진로와취업"];
+const GE_CATEGORIES = ["인문과예술", "사회와세계", "과학과기술", "미래와융합", "인성과체육"];
 const DAYS = ["월", "화", "수", "목", "금"];
 
 interface AutoOptions {

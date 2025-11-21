@@ -29,7 +29,7 @@ export default function TimetablePreview({ year, semester, lectures, isGenerated
                 </div>
             </div>
 
-            {isGenerated && (
+            {/* {isGenerated && (
                 <div className="flex justify-end animate-fadeIn">
                     <button 
                         onClick={onSave}
@@ -38,7 +38,7 @@ export default function TimetablePreview({ year, semester, lectures, isGenerated
                         ✅ 이 시간표로 저장하기
                     </button>
                 </div>
-            )}
+            )} */}
         </div>
     );
 }
